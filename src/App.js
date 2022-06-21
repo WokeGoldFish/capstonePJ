@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { createTheme } from '@mui/system';
+import { useState, useEffect } from 'react';
+import { Navbar, Products } from './components';
+import { commerce } from './lib/commerce'
+import './App.css';
+const theme = createTheme({});
+
+const App = () => {
+  const[products, setProducts] = useState([]);
+
+  const fetchProducts = async() => {
+    const { data } = await commerce.products.list();
+
+    setProducts(data); 
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, [])
+  console.log(products)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: "#EBECF0" }}>
+      hello
+      
+        <Navbar/>
+        <Products products ={products}/>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
