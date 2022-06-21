@@ -1,6 +1,4 @@
-
-
-const drawerWidth = 0;
+const dWidth = 0;
 export const useStyles = (theme) => ({
   appBar: {
     boxShadow: "none",
@@ -8,8 +6,8 @@ export const useStyles = (theme) => ({
     marginBottom: theme.spacing(2),
     background:"#D3D3CB",
     [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
+      width: `calc(100% - ${dWidth}px)`,
+      marginLeft: dWidth,
     },
   },
   title: {
@@ -36,6 +34,9 @@ export const useStyles = (theme) => ({
   },
   grow: {
     flexGrow: 1,
+  },
+  button:{
+    color:"blue"
   },
   search: {
     position: "relative",
