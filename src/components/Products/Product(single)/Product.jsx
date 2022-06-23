@@ -17,7 +17,6 @@ const styles = {
     maxWidth: "100%",
     paddingTop: "5%",
     marginTop: '10%',
-    border:1,
     borderColor: 'grey.500',
   },
   media: {
@@ -35,7 +34,7 @@ const styles = {
   },
 };
 
-const Product = ({ product }) => {
+const Product = ({ product, onAddToCart }) => {
   console.log(product)
 
   
@@ -61,7 +60,7 @@ const Product = ({ product }) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing sx={styles.cardButton}>
-        <IconButton aria-label="Add to Cart">
+        <IconButton aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>
           <AddShoppingCart />
         </IconButton>
       </CardActions>

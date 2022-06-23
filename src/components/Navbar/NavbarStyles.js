@@ -11,7 +11,6 @@ export const useStyles = (theme) => ({
     },
   },
   title: {
-    flexGrow: 1,
     alignItems: "center",
     display: "flex",
     textDecoration: "none",
@@ -19,7 +18,7 @@ export const useStyles = (theme) => ({
   },
   name:{
     flexGrow:1,
-    alignItems: "center",
+    justifyContent: "center",
     display: "flex",
     color: 'black',
   },
