@@ -24,7 +24,7 @@ const Cart = ({
       <div container style={{justifyContent:'center', display:'flex'}}>
         
         <Typography varient="h1">Cart Is Empty...</Typography>
-        <Button componet={Link} to="/" variant="outlined" type="button">
+        <Button component={Link} to="/products" variant="outlined" type="button">
           Back to Shopping
         </Button>
       </div>

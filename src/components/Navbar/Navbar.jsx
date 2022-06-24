@@ -14,7 +14,7 @@ const Navbar = ({ totalItems }) => {
 
     <AppBar sx={styles.appBar} spacing= {4}>
         <Toolbar>
-            <Link to={'/'}>
+            <Link to={'/products'}>
             <Typography sx={styles.title}>
                 <img src={logo} alt='Commerce.js' sx={styles.image}height='60px' />
                 

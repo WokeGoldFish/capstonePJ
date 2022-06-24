@@ -63,7 +63,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
           <Typography variant="subtitle2">Order ref:{order.customer_reference}</Typography>{" "}
         </div>
         <br />
-        <Button componet={Link} to="/" variant="outlined" type="button">
+        <Button component={Link} to="/products" variant="outlined" type="button">
           Back to Shopping
         </Button>
       </>
@@ -77,7 +77,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
     <>
       <Typography variant="h5">Error</Typography>
       <br />
-      <Button componet={Link} to="/" variant="outlined" type="button">
+      <Button componet={Link} to="/products" variant="outlined" type="button">
         Back to Shopping
       </Button>
     </>;

@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/system";
 import { useState, useEffect } from "react";
-import { Navbar, Products, Cart, SignUp, Checkout} from "./components";
+import { Navbar, Products, Cart, SignUp, Checkout, Landing} from "./components";
 import { commerce } from "./lib/commerce";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
@@ -64,11 +64,14 @@ const App = () => {
         <Navbar totalItems={cart.total_items} />
         <Routes>
           <Route
-            path="/"
+            path="/products"
             element={
               <Products products={products} onAddToCart={handleAddToCart} />
             }
           />
+          <Route 
+            path='/'
+            element={<Landing/>}/>
           <Route
             path="/cart"
             element={
