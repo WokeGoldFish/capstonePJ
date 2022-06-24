@@ -27,7 +27,7 @@ const Navbar = ({ totalItems }) => {
             <div sx={styles.grow}/>
             <div sx={styles.button}>
                 <IconButton component={Link} to="/cart">
-                    <Badge badgeContent={totalItems} color='secondary'>
+                    <Badge badgeContent={totalItems} color='error'>
                         <ShoppingCart />
                     </Badge>
                 </IconButton>   

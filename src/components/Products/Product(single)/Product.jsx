@@ -34,10 +34,7 @@ const styles = {
   },
 };
 
-const Product = ({ product, onAddToCart }) => {
-  console.log(product)
-
-  
+const Product = ({ product, onAddToCart }) => { 
   return (
     <Card className="root" sx={styles.root}>
       <CardMedia
@@ -51,13 +48,9 @@ const Product = ({ product, onAddToCart }) => {
           <Typography varient="h4" gutterBottom>
             {product.name}
           </Typography>
-
           <Typography varient="h5">{product.price.formatted_with_symbol}</Typography>
         </Box>
-
-        <Typography varient="body2" color="textSecondary">
-          {product.description}
-        </Typography>
+        <Typography dangerouslySetInnerHTML={{ __html: product.description }} varient="body2" color="textSecondary"/>
       </CardContent>
       <CardActions disableSpacing sx={styles.cardButton}>
         <IconButton aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>

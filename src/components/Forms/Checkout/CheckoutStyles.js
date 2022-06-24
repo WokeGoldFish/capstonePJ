@@ -15,11 +15,10 @@ export const useStyles = (theme) => ({
     },
   },
   paper: {
-    marginTop: theme.spacing(3),
-    marginRight: "25%",
-    marginLeft: "25%", 
-    marginBottom: theme.spacing(3),
-    padding: theme.spacing(2),
+    marginLeft:'15%',
+    marginRight:'15%',
+    marginTop:theme.spacing(5),
+    padding: theme.spacing(5),
     [theme.breakpoints.down("xs")]: {
       width: "100%",
       marginTop: 60,
@@ -31,7 +30,9 @@ export const useStyles = (theme) => ({
     },
   },
   stepper: {
-    padding: theme.spacing(3, 0, 5),
+    spacing: (4) ,
+    display: "flex",
+    justifyContent:'center',
   },
   buttons: {
     display: "flex",
