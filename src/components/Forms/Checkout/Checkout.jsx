@@ -38,7 +38,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
 
         setReceipt(token);
       } catch (error) {
-        navi.pushState('/')
+        navi.pushState('/products')
       }
     };
     generateToken();

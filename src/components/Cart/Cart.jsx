@@ -6,10 +6,12 @@ import {
   Grid,
   createTheme,
   Toolbar,
+  
 } from "@mui/material";
 import { useStyles } from "./CartStyles";
 import CartItem from "./CartItem/CartItem";
 import { Link } from "react-router-dom";
+
 
 const Cart = ({
   cart,
@@ -24,7 +26,7 @@ const Cart = ({
       <div container style={{justifyContent:'center', display:'flex'}}>
         
         <Typography varient="h1">Cart Is Empty...</Typography>
-        <Button component={Link} to="/products" variant="outlined" type="button">
+        <Button component={Link} to="/products" variant="contained" type="button">
           Back to Shopping
         </Button>
       </div>
@@ -47,7 +49,7 @@ const Cart = ({
         ))}
       </Grid>
       <div sx={styles.cardDetails}>
-        <Typography variant="h4" sx={{ marginTop: "5%" }}>
+        <Typography variant="h4" sx={{ color:'white', marginTop: "5%" }}>
           Subtotal: {cart.subtotal.formatted_with_symbol}
         </Typography>
         <div>
@@ -56,7 +58,7 @@ const Cart = ({
             size="large"
             type="button"
             variant="contained"
-            color="secondary"
+            color="error"
             onClick={handleEmptyCart}
           >
             Empty Your Cart
@@ -81,8 +83,8 @@ const Cart = ({
     <Container>
       <Toolbar />
       <Typography variant="h6" sx={styles.title}>
-        {" "}
-        This Is Your Cart{" "}
+        
+        This Is Your Cart
       </Typography>
 
       {!cart.line_items.length ? <EmptyCart /> : <UsedCart />}

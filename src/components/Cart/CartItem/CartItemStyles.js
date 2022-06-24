@@ -12,6 +12,7 @@ export const useStyles = () => ({
   buttons: {
     display: "flex",
     alignItems: "center",
+    justifyContent:'center',
     
   },
   text:{

@@ -57,7 +57,7 @@ const App = () => {
     getProducts();
     getCart();
   }, []);
-  document.body.style.backgroundImage = `url('https://c1.wallpaperflare.com/preview/157/959/581/wood-board-structure-world.jpg')`
+  document.body.style.backgroundImage = `url('https://www.redkeyomaha.com/wp-content/uploads/2017/11/Grey-Background.jpg')`
   return (
     <>
      

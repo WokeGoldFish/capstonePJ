@@ -5,6 +5,7 @@ export const useStyles = (theme) => ({
       marginTop: '5%',
       justifyContent: 'center',
       display:'flex',
+      color:'white',
     },
     emptyButton: {
       minWidth: '150px',
